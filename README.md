@@ -3,9 +3,7 @@
 **Student Name:** Mahfuzur Rahman  
 **Student ID:** IT23005  
 **Department:** Information and Communication Technology
-
 **Academic:** 4th Year 1st Semester 
-
 **Repository:** [https://github.com/IT23005/Cryptography-and-Cyber-Law](https://github.com/IT23005/Cryptography-and-Cyber-Law)
 
 ---
