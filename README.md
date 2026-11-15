@@ -1,14 +1,14 @@
-# Cryptography and Cyber Law (IT-4101)
+# Cryptography and Cyber Law (IT-4115)
 
 **Student Name:** Mahfuzur Rahman  
-**Student ID:** IT-23005  
-**Department / Program:** Information Technology / Computer Science & Engineering  
-**Academic Session:** 4th Year, 1st Semester (4-1)  
+**Student ID:** IT23005  
+**Department:** Information and Communication Technology
+**Academic:** 4th Year 1st Semester 
 **Repository:** [https://github.com/IT23005/Cryptography-and-Cyber-Law](https://github.com/IT23005/Cryptography-and-Cyber-Law)
 
 ---
 
-## Course Assignments and Laboratory Works
+## Course Assignments
 
 | Directory / Task | Description | Status |
 | :--- | :--- | :--- |
@@ -20,4 +20,4 @@
 
 ## Quick Navigation to CT-1
 To view the complete documentation, mathematical formulations, figures, source codes, and interactive Google Colab notebooks for Class Test 1, visit:
-👉 [**CT-1 Practicing Number Theory Documentation & Notebooks**](./CT-1%20Practicing%20Number%20Theory/README.md)
+[**CT-1 Practicing Number Theory Documentation & Notebooks**](./CT-1%20Practicing%20Number%20Theory/README.md)
