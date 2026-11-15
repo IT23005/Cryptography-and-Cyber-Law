@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fermGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#9333EA" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <rect width="950" height="480" fill="#0F172A" rx="16" />
+
+  <text x="475" y="42" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#F8FAFC">
+    Fermat's Factorization Method (|p - q| is Small)
+  </text>
+  <text x="475" y="66" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" fill="#94A3B8">
+    Decomposing Modulus N = p · q into Difference of Squares: N = a² - b² = (a - b)(a + b)
+  </text>
+
+  <!-- Left: Geometric / Mathematical Formulation -->
+  <rect x="50" y="100" width="410" height="340" rx="12" fill="#1E293B" stroke="#9333EA" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="50" y="100" width="410" height="40" rx="12" fill="url(#fermGrad)" />
+  <text x="255" y="126" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">
+    Mathematical Foundation
+  </text>
+
+  <g transform="translate(75, 160)">
+    <text x="0" y="20" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" fill="#E2E8F0">Every odd composite integer N can be written as:</text>
+    <rect x="0" y="35" width="360" height="38" rx="6" fill="#0F172A" stroke="#334155" />
+    <text x="180" y="60" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#C084FC">N = a² - b² = (a - b)(a + b)</text>
+
+    <text x="0" y="105" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" fill="#E2E8F0">Where variables a and b correspond to:</text>
+    <rect x="0" y="118" width="360" height="55" rx="6" fill="#0F172A" stroke="#334155" />
+    <text x="180" y="140" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#E2E8F0">a = (p + q) / 2  (Mean of primes)</text>
+    <text x="180" y="160" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#F472B6">b = |p - q| / 2  (Half difference)</text>
+
+    <text x="0" y="205" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" fill="#E2E8F0">When |p - q| is small:</text>
+    <text x="0" y="230" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" fill="#94A3B8">• b is very small (b &lt; 2500 when diff &lt; 5000)</text>
+    <text x="0" y="255" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" fill="#94A3B8">• a is just slightly above ⌈√N⌉</text>
+  </g>
+
+  <!-- Right: Algorithmic Execution Steps -->
+  <rect x="490" y="100" width="410" height="340" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="490" y="100" width="410" height="40" rx="12" fill="#0284C7" />
+  <text x="695" y="126" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">
+    Attack Algorithm Execution
+  </text>
+
+  <g transform="translate(515, 160)">
+    <text x="0" y="20" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Step 1: Initialize Search Bound</text>
+    <rect x="0" y="30" width="360" height="30" rx="5" fill="#0F172A" stroke="#334155" />
+    <text x="180" y="50" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#E2E8F0">a₀ = ⌈√N⌉</text>
+
+    <text x="0" y="85" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Step 2: Iterate and Test Perfect Square</text>
+    <rect x="0" y="95" width="360" height="70" rx="5" fill="#0F172A" stroke="#334155" />
+    <text x="180" y="117" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#FDE68A">For a = a₀, a₀+1, a₀+2, ... :</text>
+    <text x="180" y="137" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#FDE68A">Test if (a² - N) is a perfect square b²</text>
+    <text x="180" y="155" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#86EFAC">b = IntSqrt(a² - N);  if b² == a² - N: BREAK</text>
+
+    <text x="0" y="190" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Step 3: Extract Factors &amp; Decrypt</text>
+    <rect x="0" y="200" width="360" height="50" rx="5" fill="#0F172A" stroke="#10B981" stroke-width="1.5" />
+    <text x="180" y="222" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#34D399">p = a - b,   q = a + b</text>
+    <text x="180" y="240" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#A7F3D0">RSA Completely Broken in O(|p - q| / 2) steps!</text>
+  </g>
+</svg>

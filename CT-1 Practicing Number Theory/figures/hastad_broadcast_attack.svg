@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hastadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BE185D" />
+      <stop offset="100%" stop-color="#E11D48" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.2" />
+    </filter>
+    <marker id="hArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#FB7185" />
+    </marker>
+  </defs>
+
+  <rect width="950" height="480" fill="#0F172A" rx="16" />
+
+  <text x="475" y="42" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#F8FAFC">
+    Håstad's Broadcast Attack (Small Exponent e)
+  </text>
+  <text x="475" y="66" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" fill="#94A3B8">
+    Breaking RSA when the Same Message is Broadcast to Multiple Parties via Chinese Remainder Theorem
+  </text>
+
+  <!-- Sender Box (Top) -->
+  <rect x="350" y="95" width="250" height="70" rx="10" fill="#1E293B" stroke="#E11D48" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="350" y="95" width="250" height="30" rx="10" fill="url(#hastadGrad)" />
+  <text x="475" y="116" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Sender Broadcasts Same Plaintext M</text>
+  <text x="475" y="148" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#FECDD3">Message M (Small Exponent e = 2)</text>
+
+  <!-- Branches to Recipients -->
+  <path d="M 410 165 L 220 220" fill="none" stroke="#FB7185" stroke-width="2" marker-end="url(#hArrow)" />
+  <path d="M 540 165 L 730 220" fill="none" stroke="#FB7185" stroke-width="2" marker-end="url(#hArrow)" />
+
+  <!-- Recipient 1 -->
+  <rect x="90" y="225" width="260" height="85" rx="8" fill="#1E293B" stroke="#334155" />
+  <text x="220" y="250" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#38BDF8">Recipient 1 (N₁, e = 2)</text>
+  <text x="220" y="275" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#FCD34D">C₁ ≡ M² (mod N₁)</text>
+  <text x="220" y="295" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Intercepted by Adversary</text>
+
+  <!-- Recipient 2 -->
+  <rect x="600" y="225" width="260" height="85" rx="8" fill="#1E293B" stroke="#334155" />
+  <text x="730" y="250" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#38BDF8">Recipient 2 (N₂, e = 2)</text>
+  <text x="730" y="275" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#FCD34D">C₂ ≡ M² (mod N₂)</text>
+  <text x="730" y="295" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" fill="#94A3B8">Intercepted by Adversary</text>
+
+  <!-- CRT Box Bottom -->
+  <rect x="90" y="340" width="770" height="115" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="475" y="368" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#34D399">
+    Chinese Remainder Theorem Recombination &amp; Square Root
+  </text>
+  
+  <text x="475" y="395" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#E2E8F0">
+    By CRT: Find x such that x ≡ C₁ (mod N₁) and x ≡ C₂ (mod N₂).
+  </text>
+  <text x="475" y="418" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#A7F3D0">
+    Since M &lt; N₁ and M &lt; N₂, we have M² &lt; N₁·N₂  ⟹  x = M² EXACTLY OVER THE INTEGERS!
+  </text>
+  <text x="475" y="440" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#38BDF8">
+    Adversary computes regular integer square root: M = ⌊√x⌋  ⟹  RSA completely bypassed without factoring!
+  </text>
+</svg>

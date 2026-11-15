@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aliceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+    <linearGradient id="bobGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="eveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+    <linearGradient id="pubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#6366F1" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="950" height="520" fill="#0F172A" rx="16" />
+  
+  <!-- Title -->
+  <text x="475" y="45" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#F8FAFC">
+    Diffie-Hellman Key Exchange Protocol
+  </text>
+  <text x="475" y="70" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" fill="#94A3B8">
+    Establishing a Shared Symmetric Secret over an Insecure Public Channel
+  </text>
+
+  <!-- Public Domain Parameters Box -->
+  <rect x="250" y="95" width="450" height="65" rx="10" fill="url(#pubGrad)" stroke="#475569" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="475" y="120" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#38BDF8">
+    Public Domain Parameters (Agreed in Advance)
+  </text>
+  <text x="475" y="143" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#E2E8F0">
+    Modulus: N (Large Prime)  |  Generator: g (Primitive Root modulo N)
+  </text>
+
+  <!-- Alice Column (Left) -->
+  <rect x="50" y="180" width="260" height="300" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2" filter="url(#shadow)" />
+  <rect x="50" y="180" width="260" height="45" rx="12" fill="url(#aliceGrad)" />
+  <text x="180" y="208" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">
+    Alice (Party A)
+  </text>
+
+  <text x="70" y="250" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94A3B8">1. Private Random Secret:</text>
+  <rect x="70" y="260" width="220" height="30" rx="6" fill="#0F172A" stroke="#6366F1" stroke-width="1" />
+  <text x="180" y="280" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#A5B4FC">a ∈ {1, ..., N-1} (Secret)</text>
+
+  <text x="70" y="315" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94A3B8">2. Compute Public Value:</text>
+  <rect x="70" y="325" width="220" height="30" rx="6" fill="#0F172A" stroke="#6366F1" stroke-width="1" />
+  <text x="180" y="345" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#38BDF8">A = g^a mod N</text>
+
+  <text x="70" y="380" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94A3B8">3. Compute Shared Key:</text>
+  <rect x="70" y="390" width="220" height="70" rx="6" fill="#0F172A" stroke="#22C55E" stroke-width="1.5" />
+  <text x="180" y="415" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#E2E8F0">K_A = B^a mod N</text>
+  <text x="180" y="435" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#86EFAC">= (g^b)^a mod N</text>
+  <text x="180" y="453" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#4ADE80">= g^(ab) mod N</text>
+
+  <!-- Bob Column (Right) -->
+  <rect x="640" y="180" width="260" height="300" rx="12" fill="#1E293B" stroke="#059669" stroke-width="2" filter="url(#shadow)" />
+  <rect x="640" y="180" width="260" height="45" rx="12" fill="url(#bobGrad)" />
+  <text x="770" y="208" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">
+    Bob (Party B)
+  </text>
+
+  <text x="660" y="250" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94A3B8">1. Private Random Secret:</text>
+  <rect x="660" y="260" width="220" height="30" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1" />
+  <text x="770" y="280" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#6EE7B7">b ∈ {1, ..., N-1} (Secret)</text>
+
+  <text x="660" y="315" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94A3B8">2. Compute Public Value:</text>
+  <rect x="660" y="325" width="220" height="30" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1" />
+  <text x="770" y="345" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#38BDF8">B = g^b mod N</text>
+
+  <text x="660" y="380" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94A3B8">3. Compute Shared Key:</text>
+  <rect x="660" y="390" width="220" height="70" rx="6" fill="#0F172A" stroke="#22C55E" stroke-width="1.5" />
+  <text x="770" y="415" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#E2E8F0">K_B = A^b mod N</text>
+  <text x="770" y="435" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#86EFAC">= (g^a)^b mod N</text>
+  <text x="770" y="453" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#4ADE80">= g^(ab) mod N</text>
+
+  <!-- Transmission Arrows -->
+  <!-- Alice to Bob: A -->
+  <path d="M 315 330 L 630 330" fill="none" stroke="#6366F1" stroke-width="2.5" marker-end="url(#arrow)" />
+  <rect x="420" y="305" width="110" height="24" rx="4" fill="#0F172A" stroke="#6366F1" stroke-width="1" />
+  <text x="475" y="321" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="bold" fill="#A5B4FC">Send A →</text>
+
+  <!-- Bob to Alice: B -->
+  <path d="M 635 360 L 320 360" fill="none" stroke="#10B981" stroke-width="2.5" marker-end="url(#arrowGreen)" />
+  <rect x="420" y="345" width="110" height="24" rx="4" fill="#0F172A" stroke="#10B981" stroke-width="1" />
+  <text x="475" y="361" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="bold" fill="#6EE7B7">← Send B</text>
+
+  <!-- Insecure Channel & Eavesdropper (Eve) Center -->
+  <rect x="360" y="390" width="230" height="85" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4" />
+  <text x="475" y="412" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#F87171">
+    Eavesdropper (Eve) Intercepts:
+  </text>
+  <text x="475" y="430" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#E2E8F0">
+    Sees: N, g, A, B
+  </text>
+  <text x="475" y="450" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" fill="#FCA5A5">
+    Discrete Log Problem: Hard to find a or b!
+  </text>
+  <text x="475" y="466" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#22C55E">
+    Shared Secret K = g^(ab) mod N is Secure!
+  </text>
+</svg>
