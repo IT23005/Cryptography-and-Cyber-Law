@@ -2,7 +2,7 @@
 
 **Student Name:** Mahfuzur Rahman  
 **Student ID:** IT23005  
-**Course:** Cryptography and Cyber Law 
+**Course:** Cryptography and Cyber Law
 **Academic:** 4th Year 1st Semester  
 **Reference Workshop:** [Introduction to Number Theory and Cryptography Workshop — Maths and Physics Club, IIT Bombay](https://github.com/mnp-club/Number_Theory_and_Cryptography_Workshop)
 
