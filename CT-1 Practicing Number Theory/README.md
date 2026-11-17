@@ -1,10 +1,9 @@
 # Class Test 1 (CT-1): Practicing Number Theory & Applied Cryptography
 
 **Student Name:** Mahfuzur Rahman  
-**Student ID:** IT-23005  
-**Course:** Cryptography and Cyber Law (Course Code: IT-4101)  
-**Academic Level:** 4th Year, 1st Semester (4-1)  
-**Official Repository:** [https://github.com/IT23005/Cryptography-and-Cyber-Law](https://github.com/IT23005/Cryptography-and-Cyber-Law)  
+**Student ID:** IT23005  
+**Course:** Cryptography and Cyber Law 
+**Academic:** 4th Year 1st Semester  
 **Reference Workshop:** [Introduction to Number Theory and Cryptography Workshop — Maths and Physics Club, IIT Bombay](https://github.com/mnp-club/Number_Theory_and_Cryptography_Workshop)
 
 ---
